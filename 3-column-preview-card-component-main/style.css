@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+    /* Primary */
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* Neutral */
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+
+    /* Fonts & weights */
+    --main-font: 'Lexens Deca', sans-serif;
+    --secondary-font: 'Big Shoulders Display', serif;
+
+    --font-normal-weight: 400;
+    --font-big-weight: 700;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--main-font);
+    font-size: .875rem;
+    font-weight: var(--font-normal-weight);
+    padding: 3rem;
+}
+
+.parent-container {
+    max-width: 335px;
+    display: grid;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.parent-container div {
+    padding: 3rem;
+    min-height: 440px;
+}
+
+.parent-container p {
+    color: var(--Transparent-white);
+    margin-bottom: 2rem;
+    line-height: 2;
+} 
+
+.parent-container h1 {
+    color: var(--Very-light-gray);
+    font-family: var(--secondary-font);
+    font-weight: var(--font-big-weight);
+    margin: 2rem 0;
+}
+
+.parent-container .child-1 {
+    background-color: var(--Bright-orange);
+}
+
+.parent-container button {
+    padding: 1rem;
+    width: 60%;
+    border-radius: 30px;
+    border-style: none;
+    font-weight: var(--font-big-weight);
+}
+
+.parent-container button:hover {
+    color: var(--Transparent-white);
+    background-color: transparent;
+    border-style: outset;
+}
+
+.child-1 button {
+    color: var(--Bright-orange);
+}
+
+.parent-container .child-2 {
+    background-color: var(--Dark-cyan);
+}
+
+.child-2 button {
+    color: var(--Dark-cyan);
+}
+
+.parent-container .child-3 {
+    background-color: var(--Very-dark-cyan);
+}
+
+.child-3 button {
+    color: var(--Very-dark-cyan);
+}
+.attribution { 
+    font-size: 0.7rem; 
+    text-align: center; 
+    margin-top: 1rem;
+}
+.attribution a { 
+    font-size: larger;
+    font-style: italic;
+    text-decoration: none;
+    font-weight: bold;
+    color: hsl(192, 85%, 34%); 
+}
+
+@media (min-width: 600px) {
+    .parent-container {
+        max-width: 950px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
